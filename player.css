@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #dfe7ef;
+    font-family: sans-serif;
+}
+
+ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.wrapper {
+    width: 100%;
+    position: absolute;
+    top:10%;
+    
+    display: flex;
+    justify-content: center;
+
+    min-height: 2em;
+    background-size: cover;
+}
+
+.player {
+    background-color: #eef3f7;
+    width: 310px;
+    min-height: 480px;
+    box-shadow: 0px 15px 35px 0px rgba(50, 88, 130, 0.32);
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.player-cover {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 18%;
+    left: 50.2%;
+    transform: translate(-50%, -50%);
+    background-image: url('images/cover5.jpg');
+    box-shadow: 0px 10px 35px 5px rgba(50, 88, 130, 0.5);
+    /* z-index: 2; */
+    border-radius: 15px;
+}
+
+.icon-bar {
+    position: relative;
+    top: 60%;
+    left: 26%;
+    transform: translate(-50%, -50%);
+}
+
+ul li a, div a {
+    display: block;
+    color: #b5bac2;
+    transition: .5s;
+    padding: 1px;
+}
+
+a:hover {
+    color: rgb(109, 12, 109); 
+}
+
+.icon-bar li {
+    margin: 11%;
+}
+
+.content {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.song { 
+    color: #616161;
+    font-weight: bold;
+    font-size: 240%;
+}
+
+.singer {
+    color: #b5bac2;
+    font-weight: bold;
+    font-size: 200%;
+}
+
+.home {
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 120%;
+	color: #616161;
+    height: 34px;
+    padding: 10px;
+    border-radius: 50%;
+	box-shadow: 0px 0px 10px 3px rgba(50, 88, 130, 0.25);
+	background-color: #eef3f7;
+}
+
+.home i {
+	position: relative;
+	bottom: 14%;
+}

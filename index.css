@@ -1,0 +1,190 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #dfe7ef;
+    font-family: sans-serif;
+}
+
+ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul li i{
+    margin-right: 10px;
+    margin-left: 5px;
+}
+
+/* 默认样式 */
+ul li a {
+    position: relative;
+    display: block;
+    text-align: center;
+    margin: 0 25px;
+    color: #616161;
+    font-size: 30px;
+    text-decoration: none;
+    /* text-transform: uppercase; */
+    transition: .5s;
+    padding: 5px 10px;
+}
+/* 左下边框 */
+ul li a:before {
+    content: '';
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    width: 12px;
+    height: 12px;
+    border: 3px solid #616161;
+    /* border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px; */
+    border-width: 0 0 3px 3px;
+    transition: .5s;
+    opacity: 0;
+}
+/* 右上边框 */
+ul li a:after {
+    content: '';
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 12px;
+    height: 12px;
+    border: 3px solid #616161;
+    /* border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px; */
+    border-width: 3px 3px 0 0;
+    transition: .5s;
+    opacity: 0;
+}
+/* 鼠标悬停时，改变背景 */
+ul li a:hover {
+    color: #eef3f7; 
+    background-color: #616161;
+    box-shadow: 0px 0px 10px 0px rgba(26, 26, 26, 0.4);
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+/* 鼠标悬停之前，左下边框缩入文字背景内 */
+ul li a:hover:before {
+    bottom: -8px;
+    left: -8px;
+    opacity: 1;
+}
+/* 鼠标悬停之前，右上边框缩入文字背景内 */
+ul li a:hover:after {
+    top: -8px;
+    right: -8px;
+    opacity: 1;
+}
+
+/* ======================== */
+/* 查找按钮 */
+.search-box {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #616161;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+}
+
+.search-btn {
+    border: none;/* 取消button外框 */
+    outline: none;
+    color: #eef3f7;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #616161;
+    display: flex;
+    justify-content: center;/* 水平居中 */
+    align-items: center;/* 竖直居中 */
+    transition: .5s;
+    text-decoration: none;
+}
+
+.search-txt {
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: #eef3f7;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    transition: .5s;
+    /* 让 placehoder 居中 */
+    line-height: 40px;
+    width: 0;
+}
+/* 改变子元素输入框的样式 */
+.active-search-txt {
+    width: 240px;
+    padding: 0 6px;
+}
+
+.active-search-btn {
+    color: #616161;
+    background-color: white;
+}
+
+.search-btn:before{
+    content: '';
+    display: block;
+    position: absolute;
+    border: 50%;
+    border: 3px solid #616161;
+    left: -20px;
+    right: -20px;
+    top: -20px;
+    bottom: -20px;
+    border-radius: 50%;
+    animation: animate 1.6s linear infinite;
+    opacity: 0;
+}
+/* 两层波纹
+.search-btn:after{
+    content: '';
+    display: block;
+    position: absolute;
+    border: 50%;
+    border: 3px solid #262626;
+    left: -20px;
+    right: -20px;
+    top: -20px;
+    bottom: -20px;
+    border-radius: 50%;
+    animation: animate 1.2s linear infinite;
+    opacity: 0;
+} */
+
+@keyframes animate{
+    0%{
+        /* 2d缩小0.5倍 */
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
+
+.search-box:hover .search-btn:before{
+    border: none;
+}

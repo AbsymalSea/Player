@@ -1,0 +1,87 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #dfe7ef;
+	font-family: sans-serif;
+}
+
+.cover-image {
+	display: block;
+	height: 320px;
+	background-size: cover;
+}
+
+.cover-list {
+	display: block;
+	margin: 20px auto;
+	padding: 0;
+	font-size: 0;
+	text-align: center;
+	list-style: none;
+}
+
+.cover {
+	display: inline-block;
+	width: 330px;
+	margin: 20px;
+	font-size: 16px;
+	text-decoration: none;
+	overflow: hidden;
+	border-radius: 15px;
+	background-color: #eef3f7;
+	box-shadow: 0px 0px 10px 3px rgba(50, 88, 130, 0.25);
+	transition: transform 0.1s ease-in-out, box-shadow 0.1s;
+}
+
+.cover:hover {
+	/* 向Y轴移动-5px 同时放大1.02倍 */
+	transform: translateY(-5px) scale(1.02);
+	box-shadow: 0px 0px 10px 3px rgba(50, 88, 130, 0.25);
+}
+
+.cover-description {
+	display: block;
+	padding: 16px 5px;
+	color: #616161;
+	text-decoration: none;
+}
+
+.cover-description p {
+	margin: 0;
+	color: #b5bac2;
+	font-weight: bold;
+}
+
+.cover-description h2 {
+	margin: 0 0 14px;
+}
+
+.home {
+    position: absolute;
+    top: 475px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 120%;
+	color: #616161;
+    height: 34px;
+    border-radius: 50%;
+    padding: 10px;
+	box-shadow: 0px 0px 10px 3px rgba(50, 88, 130, 0.25);
+	background-color: #eef3f7;
+	/* 鼠标移开后，0.5秒内恢复 避免变化过于突兀 */
+	transition: .5s;
+}
+
+.home i {
+	position: relative;
+	bottom: 15%;
+}
+
+.home:hover {
+    background-color: white;
+    box-shadow: 0px 0px 10px 3px rgba(50, 88, 130, 0.25);
+	border-radius: 50%;
+	transition: .5s;
+    color: rgb(109, 12, 109); 
+}

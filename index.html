@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="软工xxxx班">
+    <meta name="copyright" content="2019-至今 软工xxxx班">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <title>我的主页</title>
+</head>
+<body>
+    <div class="search-box" id="search-box">
+        <input class="search-txt" id="search-txt" type="text" placeholder="搜索..." maxlength="20">
+        <button class="search-btn" id="search-btn">
+            <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+        </button>
+    </div>    
+    <ul>
+        <li>
+            <a href="player.html">
+                <i class="fa fa-music" aria-hidden="true">
+                <span>音乐</span>
+                </i>
+            </a>
+        </li>
+        <li>
+            <a href="profile.html">
+                <i class="fa fa-user">
+                    <span>我</span>
+                </i>
+            </a>
+        </li>
+        <li>
+            <a href="box.html">
+                <i class="fa fa-archive">
+                    <span>库</span>
+                </i>
+            </a>
+        </li>
+    </ul>
+
+<script type="text/javascript">
+
+    var box = document.getElementById('search-box');
+    var txt = document.getElementById('search-txt');
+    var btn = document.getElementById('search-btn');
+
+    box.onclick = function() {
+        if (btn.className == 'search-btn'){
+            btn.classList.add("active-search-btn");
+            txt.classList.add("active-search-txt");
+        } else {
+            // 搜索
+            btn.classList.remove("active-search-btn");
+            txt.classList.remove("active-search-txt");
+        }
+    }
+
+</script>
+</body>
+</html>
